@@ -1,0 +1,126 @@
+/* Typical Device Breakpoints (ver no W3C)
+
+    Pequenas telas: ~ até 600px
+    Celular: 600px até 768px
+    Tablet: 768px até 991px
+    Desktop: 992px até 1200px
+    Grandes telas: Acima de 1200px
+*/
+
+@media screen and (min-width: 601px) {
+    /* ------ MAIN ------ */
+    /* --- WELCOME --- */
+
+    #welcome-section h1 {
+        font-size: 9vw;
+    }
+    #welcome-section p {
+        font-size: 5vw;
+    }
+
+
+    /* ------ MAIN ------ */
+    /* --- CONTACT --- */
+    #contact h2 {
+        font-size: 6vw;
+    }
+    #contact .size2 {
+        margin: 20px 0;
+        font-size: 4vw;
+    }
+    #contact .size1 {
+        font-size: 2vw;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    /* ------ MAIN ------ */
+    /* --- PROJECTS --- */
+    .center h1 {
+        font-size: 5vw;
+    }
+    #projects h2 {
+        font-size: 3.5vw;
+    }
+}
+
+@media screen and (min-width: 993px) {
+    /* ------ HEADER ------ */
+    header {
+        justify-content: space-evenly;
+    }
+    header nav {
+        gap: 2vw;
+    }
+
+    /* ------ MAIN ------ */
+    /* --- WELCOME --- */
+
+    #welcome-section h1 {
+        font-size: 7vw;
+    }
+    #welcome-section p {
+        font-size: 4vw;
+    }
+
+
+    /* ------ MAIN ------ */
+    /* --- PROJECTS --- */
+
+
+    figure h3 {
+        font-size: 1.5rem;
+    }
+    figure figcaption {
+        font-size: 1.2rem;
+    }
+
+    /* ------ MAIN ------ */
+    /* --- CONTACT --- */
+    #contact .size2 {
+        font-size: 3vw;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    /* ------ MAIN ------ */
+    /* --- WELCOME --- */
+
+    #welcome-section h1 {
+        font-size: 5vw;
+    }
+    #welcome-section p {
+        font-size: 2.5vw;
+    }
+
+
+    /* ------ MAIN ------ */
+    /* --- PROJECTS --- */
+
+    .center h1 {
+        font-size: 3vw;
+    }
+    #projects h2 {
+        font-size: 1.5vw;
+    }
+    figure h3 {
+        font-size: 1.5rem;
+    }
+    figure figcaption {
+        font-size: 1.2rem;
+    }
+
+
+    /* ------ MAIN ------ */
+    /* --- CONTACT --- */
+    #contact h2 {
+        font-size: 5vw;
+    }
+    #contact .size2 {
+        margin: 20px 0;
+        font-size: 2vw;
+    }
+    #contact .size1 {
+        font-size: 1.3vw;
+    }
+}

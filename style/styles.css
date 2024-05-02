@@ -1,9 +1,22 @@
+/* ------ GENERAL ------ */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+h1, h2, h3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+p, a {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    text-decoration: none;
+}
+
+
+/* ------ HEADER ------ */
 header {
     display: flex;
     align-items: center;
@@ -12,17 +25,276 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 5px 5px;
-    background-color: aqua;
+    padding: 5px 10px;
+    background-color: #A32CC4;
+    border-bottom: 1px solid #ff53f4;
     z-index: 10;
 }
-
-main #welcome-section {
-    padding-top: 60px;
+header h1 {
+    position: relative;
+    animation: font 3s 1 linear;
+    text-shadow: 1px 1px 1px hsla(304, 100%, 66%, 0.5);
+}
+header nav {
+    display: flex;
+    gap: 5vw;
+}
+header a {
+    display: block;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 1px 1px 1px hsla(304, 100%, 66%, 0.3);
+}
+a span {
+    position: relative;
+}
+a span:nth-child(1) {
+    animation: fall 2.4s 1 linear;
+}
+a span:nth-child(2) {
+    animation: fall 2.2s 1 linear;
+}
+a span:nth-child(3) {
+    animation: fall 2s 1 linear;
+}
+a span:nth-child(4) {
+    animation: fall 1.8s 1 linear;
+}
+a span:nth-child(5) {
+    animation: fall 1.6s 1 linear;
+}
+a span:nth-child(6) {
+    animation: fall 1.4s 1 linear;
+}
+a span:nth-child(7) {
+    animation: fall 1.2s 1 linear;
+}
+a span:nth-child(8) {
+    animation: fall 1s 1 linear;
+}
+a span:nth-child(9) {
+    animation: fall 0.8s 1 linear;
+}
+a span:nth-child(10) {
+    animation: fall 0.6s 1 linear;
 }
 
-#projects img {
+
+/* ------ MAIN ------ */
+/* --- WELCOME --- */
+main #welcome-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding-top: 60px;
+    background-color: #653E6F;
+    border-bottom: 2px solid rgba(180, 110, 200, 0.2);
+}
+#welcome-section h1 {
+    font-size: 2.1rem;
+    color: white;
+}
+h1 span:nth-child(1) {
+    color: #C4972B;
+}
+h1 span:nth-child(2) {
+    padding: 0 5px;
+    color: #653E6F;
+    animation: backg 2.3s 1 ease-in-out forwards;
+    /*
+        The property animation-fill-mode defines how the animation will apply the style on the element targeted, before or after.
+        Set in forwards, the property will remain the last state of animation aplied.
+        This is set by none as default, which means the animation will run and cut out after, backing for the original element state.
+    */
+    background: linear-gradient(
+        to right,
+        #A32CC4 49%,
+        #653E6F 50%
+    ) right;
+    background-size: 250% 250%;
+}
+#welcome-section p {
+    color: white;
+    font-size: 1.6rem;
+    padding-top: 3rem;
+}
+
+
+/* ------ MAIN ------ */
+/* --- PROJECTS --- */
+main #projects {
+    padding-top: 50px;
+    background-color: rgb(180, 110, 200);
+    border-top: 2px solid rgba(102, 61, 112, 0.2);
+    border-bottom: 2px solid rgb(99, 91, 72, 0.2);
+}
+#projects .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.center h1 {
+    font-size: 2.1rem;
+    margin-bottom: 50px;
+    padding: 0 5px;
+    padding-bottom: 6px;
+    color: rgb(180, 110, 200);
+    background-color: #A32CC4;
+    text-shadow: 1px 1px 1px #C4972B;
+}
+#projects h2 {
+    margin-bottom: 25px;
+    padding-bottom: 3px;
+    text-align: center;
+    color: #C4972B;
+    text-shadow: 1px 1px 1px rgba(163, 44, 196);
+    border-top: 1px solid rgba(163, 44, 196);
+    border-bottom: 1px solid rgba(163, 44, 196);
+}
+#projects .proj-cntr {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 25px;
+}
+.proj-cntr .project-tile {
+    width: 375px;
+    margin-bottom: 25px;
+    background-color: #653E6F;
+    border: 3px solid #653E6F;
+}
+.project-tile figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+figure h3 {
+    width: 100%;
+    padding-bottom: 4px;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(163, 44, 196, 0.8);
+}
+figure .middle {
+    display: flex;
+    width: 100%;
+    height: 200px;
+    background-color: #B46EC8;
+}
+figure img {
     width: 250px;
     height: 200px;
-    background-color: aquamarine;
+    margin: auto;
+}
+figure figcaption {
+    text-align: center;
+    text-align: justify;
+    padding: 5px;
+}
+
+
+/* ------ MAIN ------ */
+/* --- CONTACT --- */
+main #contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding-top: 50px;
+    background-color: #635B48;
+    border-top: 2px solid rgb(180, 110, 200, 0.2);
+}
+#contact h2 {
+    padding: 0 5px;
+    padding-bottom: 3px;
+    color: #635B48;
+    background-color: #A32CC4;
+    text-shadow: 1px 1px 1px rgba(255, 83, 244, 0.5);
+}
+#contact p {
+    font-size: 1.3rem;
+    margin: 10px 0;
+    text-shadow: 1px 1px 1px rgba(255, 83, 244, 0.308);
+}
+#contact .ctc {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.ctc div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+
+/* ------ FOOTER ------ */
+footer {
+    padding: 10px 5px;
+    text-align: center;
+    background-color: #A32CC4;
+    border-top: 1px solid #ff53f4;
+}
+footer span {
+    font-weight: bold;
+}
+footer span:hover {
+    text-shadow: 0 0 2px white;
+}
+
+
+/* ------ ANIMATIONS ------ */
+@keyframes font {
+    0% {
+        opacity: 0%;
+        color: #ff53f4;
+    }
+    10% {
+        color: #ff3ef2;
+    }
+    20% {
+        color: #ff4df4;
+    }
+    40% {
+       color: #ff12f0;
+       text-shadow: 0 0 1px #ff12f0;
+    }
+    60% {
+        color: #ff00ef;
+        text-shadow: 0 0 3px #ff00ef;
+    }
+    80% {
+        color: #ff00ef;
+        text-shadow: 0 0 6px #ff00ef;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes fall {
+    0% {
+        top: -50px;
+    }
+    95% {
+        top: 2px;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+@keyframes backg {
+    to {
+        background-color: #A32CC4;
+        background-position: left;
+    }
+    45% {
+        text-shadow: none;
+    }
+    100% {
+        text-shadow: 1px 1px 1px hsla(304, 100%, 66%, 0.5);
+    }
 }
